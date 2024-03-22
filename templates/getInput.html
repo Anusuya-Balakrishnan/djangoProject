@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+
+<!--  -->
+{% block 'main' %}
+
+<div class="getInputContainer">
+  <div class="title">Student Register Form</div>
+  <form action="" class="userForm" method="POST">
+    {% csrf_token %}
+    <input type="text" name="studentName" placeholder="Enter your name" />
+    <input type="text" name="rollno" placeholder="Enter your rollno" />
+    <input
+      type="number"
+      name="age"
+      placeholder="Enter your age"
+      min="1"
+      max="100"
+    />
+    <input
+      type="tel"
+      name="mobileNumber"
+      placeholder="Enter your mobile Number"
+    />
+    <input type="text" name="address" placeholder="Enter your address" />
+    <input type="submit" />
+  </form>
+</div>
+{% endblock %}
